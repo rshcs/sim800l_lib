@@ -3,14 +3,17 @@
 This library contains selected functions only.   
 
 ---
+#### The module used in this project:
+* Sim800l Red color module.
+
 #### Introduction:
 
-This module requires delicate handling comparing to other Arduino/ Embedded systems modules (nRF24L01  connected to a 5v power but still worked afterwords also nRF24L01 has tolerance for 5v logic levels). If the module (sim800l) accidently powerd using 5v supply or used 5v logic levels could easily burn the module. If supply could not provide enough current then also module refuses connecting to a network.
+This module requires delicate handling comparing to other Arduino/ Embedded systems modules (Such as: nRF24L01  connected to a 5v power but still worked afterwords also nRF24L01 has tolerance for 5v logic levels). If the module (sim800l) accidently powerd using 5v supply or used 5v logic levels could easily burn the module. If the supply could not provide enough power (Recomended: 2A current) then also module refuses connecting to a network.
 
 ---
 #### Unstable Issues:
 1. Tried power up using TP4056 Li-Ion battery charger module (4.2v/ 2A) on a breadboard, used breadboard jumpers to make connections, the module didn't even turned on.   
-2. Tried using power supply based LM2596s (4.2v and rated 3A) on a breadboard connected using jumper cables. Module turned on but keep refused to connect with a network. Module responded to AT commands but  break transmission occured every 10 - 20 seconds (According to one resource that because the module tries to make the connection with the network but not enough power to do so).  
+2. Tried using power supply based LM2596s (4.2v and rated 3A) on a breadboard connected using jumper cables. Module turned on but refused to connect with a network. Module responded to AT commands but  break transmission occured every 10 - 20 seconds (According to one resource, that because the module tries to connect with the network but the supply power is not sufficient to do so).  
 3. Used above LM2596s based power supply directly conneted to the module (not on the breadboard) and  the module worked successfully.
 4. Some resources suggested using a 370uF to 1000uF capacitor between Vcc and Gnd pins of the module to avoid power issues.
 
