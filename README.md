@@ -36,3 +36,37 @@ This module requires delicate handling comparing to other Arduino/ Embedded syst
 * According to some sources it doesn't work with 3.3v supply. (Not tested in this project)  
 * In this project 4.0v to 4.2v input power supply was used.  
 * According to the data sheet the modules current cunsumption could be high as 2A when it transmit (Transmit Bursts).  
+
+---
+#### Some useful AT Commands:
+
+> AT+CSPN? => Get network providers name
+
+> AT+CBC => Get battery voltage(supply)
+>>Returns: AT+CBC+CBC: 0,81,4054   
+>>0 = Charging status (0=not charging, 1=charging, 2=charging has finished)  
+>>80 = Charged percentage  
+>>4054 = Battery voltage in milli volts.   
+
+> ATD0777123123; => Make a call (Digits are a sample dummy phone number)
+
+> ATA => Answer an incomming call.
+
+>AT+IPR? => Baud Rate (0: Auto Baud)
+
+> AT+CSQ => Signal quality report.
+
+>ATI => Product name and release information.
+
+> AT+GSV => Product ID info, maufacturer, product name, revision info.
+
+> AT&V => Display current config.
+
+>AT+CMGF=1 => Set SMS format to text
+
+>AT+CLTS=1 Get local timestamp enable
+>>AT&W => Save changes
+>>Restart the module
+
+>AT+CCLK? => Clock (time)
+>>AT+CCLK?+CCLK: "21/01/15,08:44:56+22"
