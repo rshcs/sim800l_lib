@@ -13,7 +13,7 @@ This module requires delicate handling comparing to other Arduino/ Embedded syst
 ---
 #### Unstable Issues:
 1. Tried power up using TP4056 Li-Ion battery charger module (4.2v/ 2A) on a breadboard, used breadboard jumpers to make connections, the module didn't even turned on.   
-2. Tried using power supply based LM2596s (4.2v and rated 3A) on a breadboard connected using jumper cables. Module turned on but refused to connect with a network. Module responded to AT commands but  break transmission occured every 10 - 20 seconds (According to one resource, that because the module tries to connect with the network but the supply power is not sufficient to do so).  
+2. Tried using power supply based LM2596s (4.2v and rated 3A) on a breadboard connected using jumper cables. Module turned on but refused to connect with the network. Module responded to AT commands but  break transmission occured every 10 - 20 seconds (According to one resource, that because the module tries to connect with the network but the supply power is not sufficient to do so).  
 3. Used above LM2596s based power supply directly conneted to the module (not on the breadboard) and  the module worked successfully.
 4. Soldered a 1000uF capacitor between 5v and Gnd pins and powered up using TP4056 module on breadboard module worked. However, after connect with with condensor mic (mic only not the module) and 8ohm speaker (without amplifier), the module refused to connect to the network. Added another 1000uF capacitor between power pins (on the breadboard) in order to bring module to the working state.
 5. The capacitor has to be placed close as possible to power pins.
@@ -114,7 +114,7 @@ that given in the +CMTI notification.
 #### Audio Input:
 
 1. Condensor mic (not the module) used as the mic input and returned large hum noise at receiver/ callers end.
-2. Hum noise reduced after removing the speaker.
+2. Hum noise reduced after removing the speaker. Placing mic close to the speaker may caused for the hum noise.
 3. Weak (audio mixed with other noice) can be heard on the other end.
 
 #### Audio Output:  
