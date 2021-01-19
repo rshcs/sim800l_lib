@@ -42,7 +42,8 @@ This module requires delicate handling comparing to other Arduino/ Embedded syst
 ---
 #### Some useful AT Commands:
 
-> A/ => Re-issue last given command
+> A/ => Re-issue last given command  
+
 > AT+CSPN? => Get network providers name
 
 > AT+COPS? => Display the current network operator
