@@ -38,6 +38,7 @@ This module requires delicate handling comparing to other Arduino/ Embedded syst
 * In this project 4.0v to 4.2v input power supply was used.  
 * According to the data sheet the modules current cunsumption could be high as 2A when it transmit (Transmit Bursts).
 * Observed curent consumption while making a call (before answering) can be high as 1.8A. 
+* **Using a diode with forward voltage drop 0.7v to provide power -Not tested yet.**
 
 ---
 #### Some useful AT Commands:
