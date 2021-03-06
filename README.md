@@ -131,4 +131,5 @@ that given in the +CMTI notification.
   * All FM commands returned OK.
   * Couldn't make FM functionality work.
   * *AT+FMSCAN* , Did not return any Auto search fm channels.
+  * Spiral antenna + Sticker type antenna were used for this test.
 
